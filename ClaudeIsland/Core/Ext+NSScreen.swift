@@ -12,7 +12,7 @@ extension NSScreen {
     var notchSize: CGSize {
         guard safeAreaInsets.top > 0 else {
             // Fallback for non-notch displays (matches typical MacBook notch)
-            return CGSize(width: 224, height: 38)
+            return CGSize(width: 125, height: 30)
         }
 
         let notchHeight = safeAreaInsets.top
@@ -22,7 +22,7 @@ extension NSScreen {
 
         guard leftPadding > 0, rightPadding > 0 else {
             // Fallback if auxiliary areas unavailable
-            return CGSize(width: 180, height: notchHeight)
+            return CGSize(width: 112, height: notchHeight)
         }
 
         // +4 to match boring.notch's calculation for proper alignment
